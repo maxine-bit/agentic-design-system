@@ -4,7 +4,7 @@
   "description": "A machine-readable design system with AI-assisted authoring and drift detection",
   "type": "module",
   "scripts": {
-    "build": "style-dictionary build --config sd.config.js",
+    "build": "node scripts/build.js",
     "sync:figma": "node scripts/sync-figma.js",
     "audit:drift": "node scripts/drift-check.js"
   },

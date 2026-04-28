@@ -1,0 +1,16 @@
+{
+  "color": {
+    "fg": {
+      "brand": { "$value": "{color.green.600}", "$type": "color" }
+    },
+    "bg": {
+      "brand":        { "$value": "{color.green.600}", "$type": "color" },
+      "brand-subtle": { "$value": "{color.green.50}",  "$type": "color" },
+      "brand-hover":  { "$value": "{color.green.700}", "$type": "color" }
+    },
+    "border": {
+      "brand": { "$value": "{color.green.600}", "$type": "color" },
+      "focus": { "$value": "{color.green.600}", "$type": "color" }
+    }
+  }
+}

@@ -1,32 +1,39 @@
-// Style Dictionary config — Phase 1 will populate this fully.
-// Runs one build per theme, outputting CSS variables + a JS/TS module.
+// Style Dictionary config — one build per theme.
+// Each theme gets its own source set: primitives + shared semantic base + theme-specific brand colours.
+// This ensures {color.fg.brand} resolves to the right hex per theme without any manual overrides.
 
 const themes = ['green', 'blue', 'purple'];
 
-export default {
+export default themes.map((theme) => ({
   source: [
     'tokens/primitives/**/*.json',
-    // Theme-specific semantic layer is injected per-theme in platforms below
+    'tokens/semantic/base.json',
+    `tokens/semantic/themes/${theme}.json`,
+    'tokens/component/**/*.json',
   ],
-  platforms: Object.fromEntries(
-    themes.map((theme) => [
-      theme,
-      {
-        transformGroup: 'css',
-        prefix: `ads`, // agentic design system
-        buildPath: `dist/${theme}/`,
-        files: [
-          {
-            destination: 'tokens.css',
-            format: 'css/variables',
-            options: { selector: `[data-theme="${theme}"]` },
-          },
-          {
-            destination: 'tokens.js',
-            format: 'javascript/es6',
-          },
-        ],
-      },
-    ])
-  ),
-};
+  platforms: {
+    css: {
+      transformGroup: 'css',
+      prefix: 'ads',
+      buildPath: `dist/${theme}/`,
+      files: [
+        {
+          destination: 'tokens.css',
+          format: 'css/variables',
+          options: { selector: `[data-theme="${theme}"]` },
+        },
+      ],
+    },
+    js: {
+      transformGroup: 'js',
+      prefix: 'ads',
+      buildPath: `dist/${theme}/`,
+      files: [
+        {
+          destination: 'tokens.js',
+          format: 'javascript/es6',
+        },
+      ],
+    },
+  },
+}));

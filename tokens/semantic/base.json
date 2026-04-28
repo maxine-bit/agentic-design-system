@@ -1,0 +1,71 @@
+{
+  "color": {
+    "fg": {
+      "default":  { "$value": "{color.gray.900}", "$type": "color" },
+      "subtle":   { "$value": "{color.gray.500}", "$type": "color" },
+      "disabled": { "$value": "{color.gray.400}", "$type": "color" },
+      "on-brand": { "$value": "{color.white}",    "$type": "color" }
+    },
+    "bg": {
+      "default":  { "$value": "{color.white}",    "$type": "color" },
+      "subtle":   { "$value": "{color.gray.50}",  "$type": "color" },
+      "disabled": { "$value": "{color.gray.100}", "$type": "color" }
+    },
+    "border": {
+      "default": { "$value": "{color.gray.200}", "$type": "color" },
+      "subtle":  { "$value": "{color.gray.100}", "$type": "color" }
+    },
+    "status": {
+      "success":    { "$value": "{color.green.600}", "$type": "color" },
+      "warning":    { "$value": "{color.amber.500}", "$type": "color" },
+      "error":      { "$value": "{color.red.600}",   "$type": "color" },
+      "info":       { "$value": "{color.blue.500}",  "$type": "color" },
+      "success-bg": { "$value": "{color.green.50}",  "$type": "color" },
+      "warning-bg": { "$value": "{color.amber.50}",  "$type": "color" },
+      "error-bg":   { "$value": "{color.red.50}",    "$type": "color" },
+      "info-bg":    { "$value": "{color.blue.50}",   "$type": "color" }
+    }
+  },
+  "font": {
+    "body": {
+      "family":      { "$value": "{font.family.sans}",        "$type": "fontFamily" },
+      "size":        { "$value": "{font.size.md}",            "$type": "dimension" },
+      "weight":      { "$value": "{font.weight.regular}",     "$type": "fontWeight" },
+      "line-height": { "$value": "{font.lineHeight.normal}",  "$type": "number" }
+    },
+    "label": {
+      "family":      { "$value": "{font.family.sans}",        "$type": "fontFamily" },
+      "size":        { "$value": "{font.size.sm}",            "$type": "dimension" },
+      "weight":      { "$value": "{font.weight.medium}",      "$type": "fontWeight" },
+      "line-height": { "$value": "{font.lineHeight.snug}",    "$type": "number" }
+    },
+    "code": {
+      "family": { "$value": "{font.family.mono}", "$type": "fontFamily" },
+      "size":   { "$value": "{font.size.sm}",     "$type": "dimension" }
+    }
+  },
+  "space": {
+    "component-xs": { "$value": "{spacing.1}",  "$type": "dimension" },
+    "component-sm": { "$value": "{spacing.2}",  "$type": "dimension" },
+    "component-md": { "$value": "{spacing.3}",  "$type": "dimension" },
+    "component-lg": { "$value": "{spacing.4}",  "$type": "dimension" },
+    "layout-sm":    { "$value": "{spacing.6}",  "$type": "dimension" },
+    "layout-md":    { "$value": "{spacing.8}",  "$type": "dimension" },
+    "layout-lg":    { "$value": "{spacing.12}", "$type": "dimension" }
+  },
+  "radius": {
+    "component": { "$value": "{radius.md}",   "$type": "dimension" },
+    "container": { "$value": "{radius.lg}",   "$type": "dimension" },
+    "pill":      { "$value": "{radius.full}", "$type": "dimension" }
+  },
+  "border": {
+    "width": {
+      "default": { "$value": "{border.width.1}", "$type": "dimension" },
+      "strong":  { "$value": "{border.width.2}", "$type": "dimension" }
+    }
+  },
+  "shadow": {
+    "component": { "$value": "{shadow.sm}", "$type": "other" },
+    "overlay":   { "$value": "{shadow.lg}", "$type": "other" }
+  }
+}
