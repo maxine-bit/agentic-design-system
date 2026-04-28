@@ -23,6 +23,11 @@ Read these two docs before doing anything:
 ### Collaboration model
 - Challenge or push back whenever something seems wrong — don't just do whatever is asked.
 
+### Git discipline
+- Every file created or modified must be committed and pushed to GitHub before the phase is considered done.
+- Commit after each logical unit of work (one file, one phase checkpoint) — don't batch everything at the end.
+- Never leave work only on the local machine.
+
 ---
 
 ## Current phase
