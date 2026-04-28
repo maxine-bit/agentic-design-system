@@ -1,0 +1,17 @@
+{
+  "name": "agentic-design-system",
+  "version": "0.1.0",
+  "description": "A machine-readable design system with AI-assisted authoring and drift detection",
+  "type": "module",
+  "scripts": {
+    "build": "style-dictionary build --config sd.config.js",
+    "sync:figma": "node scripts/sync-figma.js",
+    "audit:drift": "node scripts/drift-check.js"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
